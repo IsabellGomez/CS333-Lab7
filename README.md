@@ -127,7 +127,7 @@ TODO: change the three things to your own. The list turns blue because of the `.
 
 Question 4: why is it `className` and not `class` like in HTML?
 
---Question 4: React uses className because class is a reserved JavaScript keyword.
+--React uses className because class is a reserved JavaScript keyword.
 
 9. A style written in JavaScript. Above the `return`, add:
 
@@ -293,6 +293,8 @@ Vite makes a `dist` folder: an `index.html` and an `assets` folder. That's your 
 
 Question 8: how big is the `.js` file in `dist/assets`? Why so big for a page this small? 
 
+--The file is 220 KB. It is that size because it includes React, its supporting code, and other files needed to run the app.
+
 16. Copy it to your server. Your jokes API lives in your home folder because Node (pm2) has to run it. Your React build is just files, so it goes where nginx hands out files: `/var/www/html`. How much disk space do you have on your server? (this is important to keep an eye on in general)
 
 There is more than one way to organize your website. Pick one of these two:
@@ -356,6 +358,8 @@ If you change the folder name, use the same name in `--base=/yourname/`, in the 
 Then open `http://your-server-address/api/random`. Your jokes API from Lab 6 should still answer.
 
 Question 9: both of those come from the same server on port 80. How does nginx know which one to send you?
+
+--Nginx uses the URL path to decide what to serve. It sends react to the react files and api requests to the jokes API.
 
 Commit: `Part 5: build and deploy`
 

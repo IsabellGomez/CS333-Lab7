@@ -1,8 +1,20 @@
+
 import "./App.css";
+import List from "./List.jsx";
 
 function App() {
   const name = "Isabell";
   const luckyNumber = Math.floor(Math.random() * 100);
+
+  const hour = new Date().getHours();
+  let greeting;
+  if (hour < 12) {
+    greeting = "Good morning";
+  } else if (hour < 18) {
+    greeting = "Good afternoon";
+  } else {
+    greeting = "Good evening";
+  }
 
   const headingStyle = {
     color: "tomato",
@@ -11,14 +23,9 @@ function App() {
 
   return (
     <div>
-      <h1 style={headingStyle}>Hello, {name}!</h1>
+      <h1 style={headingStyle}>{greeting}, {name}!</h1>
       <p>Your lucky number is {luckyNumber}</p>
-
-      <ul className="my-list">
-        <li>Reading</li>
-        <li>Traveling</li>
-        <li>Music</li>
-      </ul>
+      <List />
     </div>
   );
 }

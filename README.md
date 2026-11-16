@@ -111,6 +111,8 @@ TODO: put your own name in. Refresh the page a few times.
 
 Question 3: what do the `{ }` do inside the JSX? What would show up if you took them away from `{name}`?
 
+--Question 3: The curly braces let JavaScript expressions be used inside JSX. Without them, it would display the word "name" instead of the value stored in the variable.
+
 8. A list. Under the `<p>` line, add:
 
 ```jsx
@@ -124,6 +126,8 @@ Question 3: what do the `{ }` do inside the JSX? What would show up if you took 
 TODO: change the three things to your own. The list turns blue because of the `.my-list` style in `App.css`.
 
 Question 4: why is it `className` and not `class` like in HTML?
+
+--Question 4: React uses className because class is a reserved JavaScript keyword.
 
 9. A style written in JavaScript. Above the `return`, add:
 
@@ -143,6 +147,8 @@ and change the `<h1>` line to:
 TODO: pick your own color and size.
 
 Question 5: in CSS it's `font-size`. Why is it `fontSize` here?
+
+--React uses camelCase for style properties in JavaScript instead of CSS's hyphenated names.
 
 Commit: `Part 3: JSX`
 
